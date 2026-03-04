@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XinhaoChat - 炘灏云聊 | 下一代全栈即时通讯系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Matrix Rain Canvas will be prepended here by script.js -->
+    <div class="grid-overlay"></div>
+
+    <header class="container">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00f2ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="#00f2ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="#00f2ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            XinhaoChat <span>BETA</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#features">功能</a></li>
+                <li><a href="#tech">技术栈</a></li>
+                <li><a href="#screenshots">截图</a></li>
+                <li><a href="#download">下载</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero container">
+        <h1>连接未来，畅所欲言</h1>
+        <p>炘灏云聊 (XinhaoChat) —— 功能强大的全栈即时通讯系统。<br>
+        集成私聊、群聊、朋友圈以及 AI 智能助手，基于 Spring Boot 3 与 Vue 3 构建。</p>
+        <div class="btn-group">
+            <a href="#download" class="btn">立即下载</a>
+            <a href="#features" class="btn btn-secondary">了解更多</a>
+        </div>
+        <div style="margin-top: 30px; font-size: 0.9em; color: var(--secondary-color); text-shadow: 0 0 5px rgba(255,0,80,0.5);">
+            ⚠️ 本应用服务器位于新加坡，无审查限制，请放心使用。连接可能较慢，请耐心等待。
+        </div>
+    </section>
+
+    <section id="features" class="features container">
+        <h2 class="section-title">核心功能</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💬 即时通讯</h3>
+                <ul>
+                    <li><strong>实时消息</strong>：WebSocket 低延迟传输</li>
+                    <li><strong>多媒体</strong>：支持图片、语音、视频、文件</li>
+                    <li><strong>消息撤回</strong>：支持 2 分钟内撤回，群主可撤回任意消息</li>
+                    <li><strong>Markdown</strong>：支持代码高亮与格式化，适合技术交流</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>👥 好友与群组</h3>
+                <ul>
+                    <li><strong>好友管理</strong>：搜索、添加、请求处理</li>
+                    <li><strong>群组权限</strong>：群主踢人、禁言、修改资料</li>
+                    <li><strong>会话管理</strong>：置顶重要会话，智能排序</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🤖 AI 智能助手</h3>
+                <ul>
+                    <li>集成 <strong>ModelScope (GLM-5)</strong> 模型</li>
+                    <li>支持流式对话（打字机效果）</li>
+                    <li>展示推理过程 (Reasoning Content)</li>
+                    <li>代码自动识别与高亮</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🌏 朋友圈 (云聊空间)</h3>
+                <ul>
+                    <li>发布图文动态</li>
+                    <li>点赞、评论互动</li>
+                    <li>实时通知提醒</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots container">
+        <h2 class="section-title">界面预览</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="images/linux-client.png" alt="Linux 端界面">
+            </div>
+            <div class="screenshot-item">
+                <img src="images/windows-client.png" alt="Windows 端界面">
+            </div>
+            <div class="screenshot-item">
+                <img src="images/android-client.jpg" alt="Android 端界面">
+            </div>
+            <div class="screenshot-item">
+                <img src="images/281962f8098be799e5dd1b28a7414df2.png" alt="Screenshot 1">
+            </div>
+             <div class="screenshot-item">
+                <img src="images/65b99f10658bdfed33db9d5a82e1cec2.png" alt="Screenshot 2">
+            </div>
+             <div class="screenshot-item">
+                <img src="images/7339d36c67f491456a8cbadec6534ef5.png" alt="Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">技术架构</h2>
+            <div class="tech-list">
+                <span class="tech-tag">Spring Boot 3.2.3</span>
+                <span class="tech-tag">MySQL 8.0</span>
+                <span class="tech-tag">JPA (Hibernate)</span>
+                <span class="tech-tag">Spring Security + JWT</span>
+                <span class="tech-tag">WebSocket (STOMP)</span>
+                <span class="tech-tag">Vue 3</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Electron</span>
+                <span class="tech-tag">Element Plus</span>
+                <span class="tech-tag">Pinia</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="downloads container">
+        <h2 class="section-title">下载与安装</h2>
+        
+        <div class="warning-box">
+            <strong>⚠️ 重要提示</strong>
+            <ul class="warning-list">
+                <li>服务器位于新加坡，连接可能稍慢，请耐心等待。</li>
+                <li><strong>大图片建议以文件形式发送，以确保传输稳定性。</strong></li>
+                <li>Android 端麦克风权限可能不稳定。</li>
+                <li>若提示 timeout 超时属正常现象，多尝试几次即可进入。</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <!-- Linux -->
+            <div class="download-card">
+                <i class="fab fa-linux platform-icon"></i>
+                <h3>Linux 版本</h3>
+                <p>适用于 Ubuntu, Debian, CentOS 等</p>
+                <a href="linux/XinhaoChat-0.0.0-linux.tar.gz" class="btn" download>下载 .tar.gz</a>
+                
+                <div style="text-align: left; margin-top: 20px;">
+                    <h4>安装说明：</h4>
+                    <div class="terminal">
+                        # 1. 解压安装包<br>
+                        tar -xvf XinhaoChat-0.0.0-linux.tar.gz<br><br>
+                        # 2. 设置权限<br>
+                        chmod 1777 *<br><br>
+                        # 3. 运行程序<br>
+                        ./frontend --no-sandbox
+                    </div>
+                </div>
+            </div>
+
+            <!-- Windows -->
+            <div class="download-card">
+                <i class="fab fa-windows platform-icon"></i>
+                <h3>Windows 版本</h3>
+                <p>适用于 Windows 10/11</p>
+                <a href="windows/XinhaoChat Setup 0.0.0.exe" class="btn" download>下载 .exe</a>
+                <p style="margin-top: 15px; font-size: 0.9em;">直接运行安装包即可</p>
+            </div>
+
+            <!-- Android -->
+            <div class="download-card">
+                <i class="fab fa-android platform-icon"></i>
+                <h3>Android 版本</h3>
+                <p>适用于 Android 手机</p>
+                <a href="android/app-debug.apk" class="btn" download>下载 .apk</a>
+                <p style="margin-top: 15px; font-size: 0.9em; color: var(--secondary-color);">注意：大图片请使用“发送文件”功能</p>
+            </div>
+
+            <!-- Apple (Not Supported) -->
+             <div class="download-card unsupported">
+                <i class="fab fa-apple platform-icon"></i>
+                <h3>iOS / macOS</h3>
+                <p>iPhone, iPad & Mac</p>
+                <span class="unsupported-badge">暂不支持</span>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #777;">目前暂无 iOS 和 macOS 版本计划</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact container">
+        <h2 class="section-title">联系作者</h2>
+        <div class="grid contact-grid">
+            <div class="contact-card">
+                <i class="fab fa-weixin contact-icon"></i>
+                <h3>微信</h3>
+                <p>DXH08060927</p>
+                <span class="contact-sub">搜索添加</span>
+            </div>
+            <a href="https://github.com/MSDOS-Signal" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="fab fa-github contact-icon"></i>
+                <h3>GitHub</h3>
+                <p>MSDOS-Signal</p>
+                <span class="contact-sub">查看项目源码</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 XinhaoChat 炘灏云聊. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.8em; color: #444;">Made with ❤️ for Freedom of Speech 用心守护言论自由</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
